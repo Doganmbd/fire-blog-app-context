@@ -1,0 +1,22 @@
+/* ----- NAVBAR --------- */
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+.navbar {
+    
+    background-color: #f45e44;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 4rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.navbar h2 {
+    font-family: 'Water Brush', cursive;
+    display: flex;
+    justify-content: center;
+}

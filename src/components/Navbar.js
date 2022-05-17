@@ -4,17 +4,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
-
-
-
-
 import SvgIcon from '@mui/material/SvgIcon';
+
+import "./style.css";
 
 export default function Navbar() {
   
@@ -43,10 +40,10 @@ export default function Navbar() {
 
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} >
       
-      <AppBar position="static"  color="success">
-        <Toolbar  >
+      <AppBar  position="static"  >
+        <Toolbar  className="navbar" >
           <IconButton
             size="large"
             edge="start"
@@ -56,8 +53,10 @@ export default function Navbar() {
           >
         <HomeIcon  color="inherit" sx={{ fontSize: 40 }} />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily: 'Water Brush'}} >
-             <span>{"< < < < ──── M.B.D ──── > > > > "}</span>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}  >
+            <h2>
+             <span style={{justifyContent:"center"}} >{"< < < < ──── M.B.D ──── > > > > "}</span>
+             </h2>
           </Typography>
          
             <div>

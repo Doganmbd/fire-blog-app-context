@@ -1,1 +1,0 @@
-# fire-blog-app-context

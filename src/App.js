@@ -4,9 +4,13 @@ import AuthContextProvider from './context/AuthContext';
 
 function App() {
   return (
-    <AuthContextProvider>
+    <div>
+      <AuthContextProvider>
+
       <Navbar/>
-    </AuthContextProvider>
+      </AuthContextProvider>
+    </div>
+    
   );
 }
 
