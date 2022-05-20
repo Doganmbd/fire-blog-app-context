@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth ,createUserWithEmailAndPassword} from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -16,3 +16,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
+
+// register sayfasından email ve passwordu çekmek için 
+
+export const createUser = async(email,password)=> {
+    try {
+        await
+        createUserWithEmailAndPassword(auth, email, password)
+          await updateProfile(auth.currentUser, {
+            displayName: displayName, photoURL: ""
+          });
+        }
+          catch(error) => {
+            alert(error.message)
+          }
+}
