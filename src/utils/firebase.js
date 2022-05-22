@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut } from "firebase/auth";
+import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut , onAuthStateChanged } from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -45,5 +45,16 @@ export const signIn = async (email, password, navigate) => {
 export const logOut = () => {
   signOut(auth);
   
+};
+
+export const userObserver = (setCurrentUser) => {
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
+      setCurrentUser(currentUser);
+    } else {
+      // User is signed out
+      setCurrentUser(false);
+    }
+  });
 };
 
