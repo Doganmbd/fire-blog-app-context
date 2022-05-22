@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut , onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut , onAuthStateChanged, GoogleAuthProvider, signInWithPopup,sendPasswordResetEmail } from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -68,6 +68,21 @@ export const signUpProvider = (navigate) => {
     })
     .catch((error) => {
       console.log(error);
+    });
+};
+
+
+export const forgotPassword = (email) => {
+  // Email yoluyla şifre sıfırlama için kullanılan firebase metodu
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+
+       alert("Please check your mail box!");
+    })
+    .catch((err) => {
+     
+       alert(err.message);
+
     });
 };
 
