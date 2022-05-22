@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut , onAuthStateChanged } from "firebase/auth";
+import { getAuth ,createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile , signOut , onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -57,4 +57,18 @@ export const userObserver = (setCurrentUser) => {
     }
   });
 };
+
+export const signUpProvider = (navigate) => {
+  const provider = new GoogleAuthProvider();
+
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log(result);
+      navigate("/");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 
