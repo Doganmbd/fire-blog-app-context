@@ -21,3 +21,65 @@
     justify-content: center;
     color: #f9be97;
 }
+
+
+/* ------ HEADER --------- */
+
+.bounce {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #fefefe;
+    color: #e84224;
+    background-color: #f4dccf;
+    margin-top: 1rem;
+    word-spacing: 20rem;
+    font-family: 'Water Brush', cursive;
+}
+
+.bounce h1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    -moz-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    -moz-animation: bouncing-text 15s linear infinite alternate;
+    -webkit-animation: bouncing-text 15s linear infinite alternate;
+    animation: bouncing-text 25s linear infinite alternate;
+    
+}
+
+@-moz-keyframes bouncing-text {
+    0% {
+        -moz-transform: translateX(50%);
+    }
+    100% {
+        -moz-transform: translateX(-50%);
+    }
+}
+
+@-webkit-keyframes bouncing-text {
+    0% {
+        -webkit-transform: translateX(50%);
+    }
+    100% {
+        -webkit-transform: translateX(-50%);
+    }
+}
+
+@keyframes bouncing-text {
+    0% {
+        -moz-transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    100% {
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
