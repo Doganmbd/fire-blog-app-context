@@ -4,13 +4,15 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 import googleLogo from "../assests/google.png";
-import {createUser} from "../utils/firebase";
+import {createUser,signUpProvider} from "../utils/firebase";
+import {useNavigate} from "react-router-dom";
 
 
 const Register = () => {
   const [email,setEmail] = useState();
   const [password, setPassword] = useState()
   const [fullName, setFullName] = useState();
+  const navigate=useNavigate()
 
 
   const handleSubmit = (e)=> {
@@ -20,7 +22,9 @@ const Register = () => {
   }
 
 
-
+  const handleRegister = ()=> {
+    signUpProvider(navigate)
+  }
 
   const style = {
     "& label.Mui-focused": {
@@ -70,14 +74,14 @@ const Register = () => {
             type="password"
             autoComplete="current-password"
             onChange={(e)=> setPassword(e.target.value)}
-            
+
             
           />
 
           <Button variant="contained" type="submit" className="registerButton">
             Register
           </Button>
-          <Button variant="contained" className="googleButton" >
+          <Button variant="contained" className="googleButton" onClick={handleRegister} >
             WITH <img src={googleLogo} alt="google-logo" />
           </Button>
         </form>
