@@ -4,8 +4,9 @@ import Button from "@mui/material/Button";
 import { forgotPassword, signIn, signUpProvider } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import "./styles/login.css";
-import google from "../assets/google.png";
-import nextForgot from "../assets/password.png";
+import google from "../assests/google.png";
+import nextForgot from "../assests/password.png";
+import blog from "../assests/blog.png";
 
 
 const Login = () => {
@@ -39,7 +40,7 @@ const Login = () => {
   return (
     <div className="registerMain">
       <div className="registerContainer">
-        
+        <img src={blog} alt="blog" className="blogLogo" />
         <h1>── Login ──</h1>
 
         <form action="" onSubmit={handleSubmit}>
