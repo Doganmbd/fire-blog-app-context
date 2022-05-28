@@ -1,9 +1,10 @@
 /* ----- NAVBAR --------- */
-@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
 
 .navbar {
     
-    background-color: #f45e44;
+    background-color: #db3517;
     color: whitesmoke;
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,8 @@
 }
 
 .navbar h2 {
-    font-family: 'Water Brush', cursive;
+    /* font-family: 'Water Brush', cursive; */
+    font-family: 'Girassol', cursive;
     display: flex;
     justify-content: center;
     color: #f9be97;

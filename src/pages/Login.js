@@ -4,6 +4,8 @@ import Button from "@mui/material/Button";
 import { forgotPassword, signIn, signUpProvider } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import "./styles/login.css";
+import google from "../assets/google.png";
+import nextForgot from "../assets/password.png";
 
 
 const Login = () => {
@@ -69,7 +71,7 @@ const Login = () => {
             className="googleButton"
             onClick={handleProviderLogin}
           >
-            WITH 
+            WITH <img src={google} alt="google-logo"/>
           </Button>
         </form>
 
@@ -79,8 +81,9 @@ const Login = () => {
             <Button onClick={() => navigate("/register")}>Register</Button>
           </p>
           <p>
-            Do you forgot the password?{" "}
+            Do you forgot the password?{" "} 
             <Button onClick={() => forgotPassword(email)}>
+            <img src={nextForgot} alt="nextForgot" />
               
             </Button>
           </p>

@@ -9,8 +9,9 @@ import Link from '@mui/material/Link';
 import { Link as RouterLink } from 'react-router-dom';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import homeIcon from "../assets/homeIcon.png";
 
-import SvgIcon from '@mui/material/SvgIcon';
+
 
 import "./style.css";
 
@@ -31,14 +32,7 @@ export default function Navbar() {
   };
 
 
-  function HomeIcon(props) {
-    return (
-      <SvgIcon {...props}>
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </SvgIcon>
-    );
-  }
-
+ 
 
   return (
     <Box sx={{ flexGrow: 1 }} >
@@ -54,13 +48,13 @@ export default function Navbar() {
             sx={{ mr: 2 }}
           >
             
-        <HomeIcon  color="inherit" sx={{ fontSize: 40 }} />
+        <img src={homeIcon} alt="homeIcon"  style = {{width:"45px"}}/>
         
           </IconButton>
           </RouterLink>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}  >
             <h2>
-             <span style={{justifyContent:"center"}} >{"< < < < ──── M.B.D ──── > > > > "}</span>
+             <span style={{justifyContent:"center"}} >{"< < < < ──── Mbd Blog ──── > > > > "}</span>
              </h2>
           </Typography>
          
