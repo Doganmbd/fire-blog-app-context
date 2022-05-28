@@ -1,15 +1,17 @@
 import './App.css';
-import Navbar from './components/Navbar';
+
 import AuthContextProvider from './context/AuthContext';
-import Dashboard from './pages/Dashboard';
+
+import Router from './router/Router';
 
 function App() {
   return (
     <div>
       <AuthContextProvider>
-      <Navbar/>
-      <Dashboard />
+        <Router/>       
+        
       </AuthContextProvider>
+
     </div>
     
   );

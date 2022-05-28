@@ -5,7 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-
+import Link from '@mui/material/Link';
+import { Link as RouterLink } from 'react-router-dom';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
@@ -44,6 +45,7 @@ export default function Navbar() {
       
       <AppBar  position="static"  >
         <Toolbar  className="navbar" >
+        <RouterLink to={"/"}>
           <IconButton
             size="large"
             edge="start"
@@ -51,8 +53,11 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
+            
         <HomeIcon  color="inherit" sx={{ fontSize: 40 }} />
+        
           </IconButton>
+          </RouterLink>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}  >
             <h2>
              <span style={{justifyContent:"center"}} >{"< < < < ──── M.B.D ──── > > > > "}</span>
@@ -85,8 +90,16 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <div>
+             <Link component={RouterLink} to={"/login"}>
+            <MenuItem onClick={handleClose}>Login</MenuItem>
+            </Link>
+            
+            
+            <MenuItem onClick={handleClose}>Register</MenuItem>
+            
+
+            </div>
               </Menu>
             </div>
          
