@@ -1,30 +1,26 @@
-import React, { useState } from "react";
-
+import React,{useState} from "react";
+import blogLogo from "../assests/blog.png";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-
-import { forgotPassword, signIn, signUpProvider } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
-
+import googleLogo from "../assests/google.png";
+import {createUser} from "../utils/firebase";
 
 
 const Register = () => {
-  const navigate = useNavigate();
+  const [email,setEmail] = useState();
+  const [password, setPassword] = useState()
+  const [fullName, setFullName] = useState();
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e)=> {
+    const displayName=fullName;
     e.preventDefault();
-    signIn(email, password, navigate);
-    // console.log(email, password);
-    
-  };
+    createUser(email,password,displayName);
+  }
 
-  const handleProviderLogin = () => {
-    signUpProvider(navigate);
-  };
+
+
 
   const style = {
     "& label.Mui-focused": {
@@ -40,54 +36,51 @@ const Register = () => {
   return (
     <div className="registerMain">
       <div className="registerContainer">
-        
+        <img src={blogLogo} alt="blog-logo" className="blogLogo" />
         <h1>── Register ──</h1>
 
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit} >
           <TextField
             sx={style}
-            className="input"
+            name="fullName"
+            required
+            id="outlined-required"
+            label="Full Name"
+            defaultValue=""
+            onChange={(e)=> setFullName(e.target.value)}
+            
+          />
+
+          <TextField
+            sx={style}
+            name="email"
             required
             id="outlined-required"
             label="Email"
             defaultValue=""
             onChange={(e) => setEmail(e.target.value)}
-            type="email"
+            
           />
           <TextField
             sx={style}
+            name="password"
             required
             id="outlined-password-input"
             label="Password"
             type="password"
             autoComplete="current-password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e)=> setPassword(e.target.value)}
+            
+            
           />
 
-          <Button variant="contained" className="registerButton" type="submit">
-            Login
+          <Button variant="contained" type="submit" className="registerButton">
+            Register
           </Button>
-          <Button
-            variant="contained"
-            className="googleButton"
-            onClick={handleProviderLogin}
-          >
-            WITH 
+          <Button variant="contained" className="googleButton" >
+            WITH <img src={googleLogo} alt="google-logo" />
           </Button>
         </form>
-
-        <div style={{ fontFamily: "sans-serif", fontSize: "12px" }}>
-          <p>
-            Are you not registered?{" "}
-            <Button onClick={() => navigate("/register")}>Register</Button>
-          </p>
-          <p>
-            Do you forgot the password?{" "}
-            <Button onClick={() => forgotPassword(email)}>
-              
-            </Button>
-          </p>
-        </div>
       </div>
     </div>
   );
