@@ -3,6 +3,7 @@ import {BrowserRouter as Routers , Routes,Route} from "react-router-dom"
 import Navbar from '../components/Navbar'
 import Dashboard from '../pages/Dashboard'
 import Login from '../pages/Login'
+import Register from '../pages/Register'
 
 const Router = () => {
   return (
@@ -12,7 +13,8 @@ const Router = () => {
             <Routes>
               <Route path="/" element={<Dashboard/>} />
               <Route path="/login" element={<Login />} />
-              
+              <Route path="/register" element={<Register/>} />
+
 
             </Routes>
         </Routers>

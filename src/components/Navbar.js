@@ -95,10 +95,9 @@ export default function Navbar() {
             <MenuItem onClick={handleClose}>Login</MenuItem>
             </Link>
             
-            
+            <RouterLink  to={"/register"}>
             <MenuItem onClick={handleClose}>Register</MenuItem>
-            
-
+            </RouterLink>
             </div>
               </Menu>
             </div>
