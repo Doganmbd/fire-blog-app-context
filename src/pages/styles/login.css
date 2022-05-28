@@ -1,0 +1,71 @@
+.registerMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDEFF4;
+    min-height: 100vh;
+    font-family: 'Girassol', cursive;
+    /* background-image: url(https://picsum.photos/800/800); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.registerContainer{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    box-shadow: 5px 10px 8px #ecaea3;
+    color: #a13724;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.blogLogo{
+    border-radius: 50%;
+    background-color: #e96149;
+    padding: 1rem;
+    width: 12rem;
+    height: 10rem;
+    margin: 1rem;
+}
+
+.registerContainer form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.registerContainer form>*{
+    margin-bottom: 1rem;
+}
+
+form .googleButton{
+    height: 2.5rem;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+form .googleButton img{
+    height: 2rem;
+    margin-left: 2rem;
+}
+
+form .googleButton:hover{
+    background-color: #f59786;
+}
+
+form .registerButton{
+    background-color: #65251a;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+form .registerButton:hover{
+    color: #65251a;
+    background-color: #ef6f59;
+    font-weight: bold;
+}

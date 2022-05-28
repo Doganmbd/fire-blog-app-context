@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
-
 import { forgotPassword, signIn, signUpProvider } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-
+import "./styles/login.css";
 
 
 const Login = () => {
