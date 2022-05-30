@@ -101,6 +101,9 @@ export default function Navbar() {
                     <RouterLink to={"/newblog"} className="link">
               <MenuItem onClick={handleClose}>New Blog</MenuItem>
             </RouterLink>
+            <RouterLink to={"/"} className="link">
+              <MenuItem onClick={handleClose}>LogOut</MenuItem>
+            </RouterLink>
                   </div>
 
                 ) :

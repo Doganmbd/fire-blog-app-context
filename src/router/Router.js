@@ -18,6 +18,7 @@ const Router = () => {
               <Route path="/register" element={<Register/>} />
               <Route path="/profile" element={<Profile/>} />
               <Route path="/newblog" element={<NewBlog />} />
+              
 
 
             </Routes>
