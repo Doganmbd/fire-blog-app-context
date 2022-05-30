@@ -11,17 +11,16 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import homeIcon from "../assests/homeIcon.png";
 
-
-
-
-
+import {useAuthContext} from "../context/AuthContext";
+import {useState}  from "react";
+import { logOut } from "../utils/firebase";
 
 
 import "./style.css";
 
 export default function Navbar() {
 
-  
+  const {currentUser} = useAuthContext();
 
 
 
@@ -55,7 +54,7 @@ export default function Navbar() {
             sx={{ mr: 2 }}
           >
             
-        <img src={homeIcon} alt="homeIcon"  style = {{width:"45px"}}/>
+        <img src={homeIcon} alt="homeIcon"  style = {{width:"35px"}}/>
         
           </IconButton>
           </RouterLink>
@@ -66,15 +65,18 @@ export default function Navbar() {
           </Typography>
          
             <div>
+            
               <IconButton
-                size="large"
+                size="medium"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle style={{fontSize:"40px"}}/>
+                
+                <h5>{currentUser?.displayName}</h5>
+                <AccountCircle style={{fontSize:"30px"}}/>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -91,7 +93,18 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <div>
+                {currentUser ? (
+                  <div>
+                    <RouterLink to={"/profile"}>
+                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    </RouterLink>
+                   
+                  </div>
+
+                ) :
+                (
+
+            <div>
              <Link component={RouterLink} to={"/login"}>
             <MenuItem onClick={handleClose}>Login</MenuItem>
             </Link>
@@ -100,9 +113,11 @@ export default function Navbar() {
             <MenuItem onClick={handleClose}>Register</MenuItem>
             </RouterLink>
             </div>
-              </Menu>
-            </div>
          
+         )}
+         </Menu>
+       </div>
+
         </Toolbar>
       </AppBar>
     </Box>
