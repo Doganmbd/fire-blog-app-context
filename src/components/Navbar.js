@@ -102,7 +102,7 @@ export default function Navbar() {
               <MenuItem onClick={handleClose}>New Blog</MenuItem>
             </RouterLink>
             <RouterLink to={"/"} className="link">
-              <MenuItem onClick={handleClose}>LogOut</MenuItem>
+              <MenuItem onClick={handleClose && (() => logOut())}>LogOut</MenuItem>
             </RouterLink>
                   </div>
 
