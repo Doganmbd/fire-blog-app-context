@@ -1,0 +1,32 @@
+.profilContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #803601;
+}
+
+.profilContainer>div{
+    background-color: #faead5;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f6e1c6;
+    box-shadow: 5px 10px 8px #e2c093;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+}
+
+.profilContainer .profileIcon {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    align-self: center;
+    color: #f5751a;
+    /* border: 1px solid red; */
+}
+
+.profilContainer>* {
+    margin: 1rem;
+}
