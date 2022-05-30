@@ -98,7 +98,9 @@ export default function Navbar() {
                     <RouterLink to={"/profile"}>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
                     </RouterLink>
-                   
+                    <RouterLink to={"/newblog"} className="link">
+              <MenuItem onClick={handleClose}>New Blog</MenuItem>
+            </RouterLink>
                   </div>
 
                 ) :

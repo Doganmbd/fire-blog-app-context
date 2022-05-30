@@ -1,0 +1,30 @@
+.newblogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Girassol', cursive;
+}
+
+.newblogContainer h1{
+    color: #65251a;
+}
+
+.newblogContainer form {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.newblogContainer form>*{
+    margin-bottom: 1rem;
+}
+
+.newblogContainer .btn{
+    background-color: #65251a;
+    font-size: 1.2rem;
+}
+
+.newblogContainer .btn:hover{
+    background-color: #ef6f59;
+    
+}
