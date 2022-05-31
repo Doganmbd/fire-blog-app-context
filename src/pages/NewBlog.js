@@ -11,7 +11,7 @@ import "./styles/newblog.css";
 const NewBlog = () => {
   let navigate = useNavigate();
   const { currentUser } = useAuthContext();
-  const {data,setData,date,time} = useBlogContext();
+  const {info,setInfo,date,time} = useBlogContext();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -19,14 +19,14 @@ const NewBlog = () => {
     // const privateId  = currentUser.reloadUserInfo.localId;
     /* burdaki name => inputa göre değişir. title, url veya content. */
     // burada hepsini ortak paydada aldım istersem aşağıda teker teker de bunları atayabilirim
-    setData({...data,[name]:value , date:date+time})
+    setInfo({...info,[name]:value , date:date+time})
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    AddBlog(currentUser);
+    AddBlog(info,currentUser);
     //yeni blog eklendikten sonra inputları boşaltmak için
-    setData({...data,title:"",imageUrl:"",content:"",date:""})
+    setInfo({...info,title:"",imageUrl:"",content:"",date:""})
 
     navigate("/");
   };
@@ -42,6 +42,8 @@ const NewBlog = () => {
     },
   };
 
+  console.log(info)
+
   return (
     <div className="newblogContainer">
       <img src={blogLogo} alt="blog-logo" className="blogLogo" />
@@ -54,6 +56,7 @@ const NewBlog = () => {
           id="outlined-required"
           label="Title"
           name="title"
+          value={info?.title}
           onChange={handleChange}
         />
 
@@ -62,8 +65,9 @@ const NewBlog = () => {
           required
           id="outlined-required"
           label="Image URL"
-          name="imgUrl"
+          name="imageUrl"
           type="url"
+          value={info?.imageUrl}
           onChange={handleChange}
         />
 
@@ -75,6 +79,7 @@ const NewBlog = () => {
           rows={10}
           required
           name="content"
+          value={info?.content}
           onChange={handleChange}
         />
         <Button variant="contained" className="btn" type="submit">
