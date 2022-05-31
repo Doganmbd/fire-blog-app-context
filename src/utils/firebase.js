@@ -108,7 +108,7 @@ export const AddBlog = (info, currentUser) => {
 
   set(newBlogRef, {
     title: info.title,
-    imgUrl: info.imgUrl,
+    imageUrl: info.imageUrl,
     content: info.content,
     date: info.date,
     likes: 0,
@@ -134,12 +134,17 @@ export const useFetch = () => {
       for (let id in data) {
         blogsArray.push({ id, ...data[id] });
       }
+      console.log(blogsArray)
       setBlogList(blogsArray);
       setIsLoading(false);
+
     });
   }, []);
+  console.log(blogList)
+  console.log(isLoading)
   return { isLoading, blogList };
 };
+console.log(useFetch)
 
 //!Bilgi silme işlemi
 export const DeleteBlog = (id) => {
