@@ -80,13 +80,13 @@ export default function Navbar() {
             >
               {currentUser ? (
                 <div>
-                  <RouterLink to={"/profile"}>
+                  <RouterLink className="newPage" to={"/profile"}>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
                   </RouterLink>
-                  <RouterLink to={"/newblog"} className="link">
+                  <RouterLink className="newPage" to={"/newblog"} >
                     <MenuItem onClick={handleClose}>New Blog</MenuItem>
                   </RouterLink>
-                  <RouterLink to={"/"} className="link">
+                  <RouterLink to={"/"} className="newPage">
                     <MenuItem onClick={handleClose && (() => logOut())}>
                       LogOut
                     </MenuItem>

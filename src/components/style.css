@@ -16,6 +16,25 @@
     z-index: 1;
 }
 
+.navbar img {
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+.navbar img:hover {
+    opacity: 1;
+    
+}
+
+.navbar h5 {
+    margin-right: 1rem;
+}
+
+
 .navbar h2 {
     /* font-family: 'Water Brush', cursive; */
     font-family: 'Girassol', cursive;
@@ -24,7 +43,10 @@
     color: #f9be97;
 }
 
-
+.newPage {
+    color: black;
+    text-decoration: none;
+}
 /* ------ HEADER --------- */
 
 .bounce {
