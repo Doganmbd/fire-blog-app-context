@@ -1,6 +1,7 @@
 import './App.css';
 
 import AuthContextProvider from './context/AuthContext';
+import BlogContextProvider from './context/BlogContext';
 
 import Router from './router/Router';
 
@@ -8,8 +9,9 @@ function App() {
   return (
     <div>
       <AuthContextProvider>
-        <Router/>       
-        
+        <BlogContextProvider>
+          <Router/>       
+        </BlogContextProvider>
       </AuthContextProvider>
 
     </div>
