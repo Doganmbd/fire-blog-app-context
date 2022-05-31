@@ -12,15 +12,15 @@ const initialValues = {
 
 const BlogContextProvider = ({children}) => {
 
-    const [data, setData] = useState(initialValues);
-
+    
     const date = new Date().toLocaleDateString() + " "
     const time = new Date().toLocaleTimeString().slice(0,5)
-
+    
+    const [info, setInfo] = useState(initialValues);
 
 
     return (
-        <BlogContext.Provider value={{data,date,time,setData}} >
+        <BlogContext.Provider value={{info,date,time,setInfo}} >
             {children}
         </BlogContext.Provider>
     )
