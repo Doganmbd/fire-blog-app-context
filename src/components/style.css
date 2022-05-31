@@ -107,3 +107,60 @@
         transform: translateX(-50%);
     }
 }
+
+/*----- BLOG CARDS --------- */
+.blogCardForm{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+        
+}
+.spinner img{
+    width: 100px;
+    text-align: center;
+    
+    
+}
+
+.blogCardForm .cardContainer{
+    box-shadow: 5px 10px 8px #f6b3a7;
+    margin: 2rem 1rem;
+    width: 20rem;
+    
+}
+
+.cardContainer .cardImage {
+    object-fit: fill;
+    object-position: center;
+    /* cardlardaki img lere verilen efect :   */
+    filter: drop-shadow(8px 8px 10px gray);
+    filter:hue-rotate(180deg);
+   
+}
+
+.cardContainer .favBtn{
+    color: gray;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.cardContainer .active{
+    color: #930c0c;
+    transition: 0.5s;
+}
+
+.cardBottom{
+    display: flex;
+    
+    }
+    
+    .cardBottom .email{
+        font-size: 14px;
+        /* mail i sağ alt köşeye yapıştırmak için */
+        margin-top: auto;
+        margin-left: auto;
+    }
+    
