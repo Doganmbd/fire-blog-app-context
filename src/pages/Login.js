@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     signIn(email, password, navigate);
     // console.log(email, password);
-    
+    navigate("/");
   };
 
   const handleProviderLogin = () => {
