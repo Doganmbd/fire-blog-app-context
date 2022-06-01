@@ -21,6 +21,7 @@ import {
   update,
 } from "firebase/database";
 import { useEffect, useState } from "react";
+import {Toastify, ToastifyInfo} from "./toastify";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -61,6 +62,7 @@ export const signIn = async (email, password, navigate) => {
 
 export const logOut = () => {
   signOut(auth);
+  ToastifyInfo("logged out successfully")
 };
 
 export const userObserver = (setCurrentUser) => {
@@ -150,7 +152,7 @@ console.log(useFetch)
 export const DeleteBlog = (id) => {
   const db = getDatabase();
   remove(ref(db, "/blogs/" + id));
-
+  Toastify("deletion succeeded");
   
 };
 
