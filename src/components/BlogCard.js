@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import { red } from "@mui/material/colors";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+
 
 import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import { useNavigate } from "react-router-dom";
@@ -36,38 +36,40 @@ export default function BlogCard() {
   const { blogList } = useFetch();
   let navigate = useNavigate();
   const { currentUser, handleFavIcon } = React.useContext(AuthContext);
-  console.log(currentUser);
-  console.log(blogList);
+  
 
+   
+  
+  
   const [expanded, setExpanded] = React.useState(false);
-
+  
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  
   return (
     <div className="blogCardForm">
       {blogList ? (
         blogList?.map((item, index) => (
           <Card sx={{ maxWidth: 345 }} key={index} className="cardContainer">
             <CardHeader
-              onClick={() =>
+              onClick={(e) => 
                 navigate(`/details/${item.id}`, { state: { item } })
               }
+              
               avatar={
-                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                  {item.user[0]}
+                <Avatar sx={{ bgcolor: red[500]  }} aria-label="recipe">
+                  
                 </Avatar>
               }
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
-              sx={{ cursor: "pointer" }}
-              title={item?.title}
+              
+              sx={{ cursor: "pointer" }} 
+              titleTypographyProps={{variant:'h5' }}
+              title={item?.title}  
               subheader={item?.date}
             />
+
+            
             <CardMedia
               className="cardImage"
               component="img"
@@ -107,7 +109,7 @@ export default function BlogCard() {
                   {" "}
                   {item.likedUserIds?.length}
                 </span>
-                <span>0</span>
+                
               </IconButton>
 
               <IconButton aria-label="add to favorites">
@@ -118,13 +120,10 @@ export default function BlogCard() {
                       : "favBtn"
                   }
                   sx={{ cursor: "pointer", marginRight: "5px" }}
-                  onClick={(e) => handleFavIcon(e, item)}
+                  /* onClick={(event) => handleFavIcon(event, item)} */
                 />
-                <span style={{ marginRight: "0.5rem" }}>
-                  {" "}
-                  {item.likedUserIds?.length}
-                </span>
-                <span>0</span>
+               
+                
               </IconButton>
 
               <IconButton aria-label="share">
@@ -136,7 +135,7 @@ export default function BlogCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
               >
-                <ExpandMoreIcon />
+                <ExpandMoreIcon  />
               </ExpandMore>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
