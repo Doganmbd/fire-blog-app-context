@@ -113,7 +113,7 @@ export default function Details() {
                   {" "}
                   {data.likedUserIds?.length}
                 </span>
-                <span>0</span>
+           
               </IconButton>
 
               <IconButton aria-label="add to favorites">
@@ -126,11 +126,8 @@ export default function Details() {
                   sx={{ cursor: "pointer", marginRight: "5px" }}
                   onClick={(e) => handleFavIcon(e, data)}
                 />
-                <span style={{ marginRight: "0.5rem" }}>
-                  {" "}
-                  {data.likedUserIds?.length}
-                </span>
-                <span>0</span>
+              
+           
               </IconButton>
 
               <IconButton aria-label="share">
