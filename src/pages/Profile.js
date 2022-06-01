@@ -9,9 +9,11 @@ const Profile = () => {
 
   return (
     <div className="profilContainer">
+      <div>
         <AccountCircleRoundedIcon className="profileIcon" />
         <p>User Name  :  {currentUser?.displayName}</p>
         <p>User Email  :  {currentUser?.email}</p>
+      </div>
     </div>
   )
 }

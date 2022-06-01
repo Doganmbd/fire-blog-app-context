@@ -7,11 +7,11 @@
 }
 
 .profilContainer>div{
-    background-color: #faead5;
+    background-color: #fbefe0;
     display: flex;
     flex-direction: column;
     border: 1px solid #f6e1c6;
-    box-shadow: 5px 10px 8px #e2c093;
+    box-shadow: 5px 10px 8px #ce9f62;
     padding: 2rem;
     margin-top: 5rem;
     border-radius: 1rem;
