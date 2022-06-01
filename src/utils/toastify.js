@@ -2,7 +2,6 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 
 export const Toastify = (msg)=>{
-
   toast.success(msg, {
     position: "top-right",
     autoClose: 3000,
@@ -17,7 +16,7 @@ export const Toastify = (msg)=>{
 export const ToastifyInfo = (msg)=>{
   toast.info(msg, {
     position: "top-right",
-    autoClose: 5000,
+    autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
