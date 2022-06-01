@@ -7,6 +7,8 @@ import { EditUser } from "../utils/firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 
+import { Toastify } from "../utils/toastify";
+
 
 const Update = () => {
   const { info, setInfo, date, time } = useBlogContext();
@@ -33,6 +35,7 @@ const Update = () => {
     e.preventDefault();
     EditUser(info);
     // editten sonra new blog value larını temizlemek için : 
+    Toastify("update succeeded");
     setInfo({ ...info, title: "", imageUrl: "", content: "", date: "" });
     navigate(`/`);
   };
