@@ -19,7 +19,9 @@ import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import { useLocation,useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { DeleteBlog } from "../utils/firebase";
-import { Button } from "@mui/material";
+import { Button, Collapse } from "@mui/material";
+
+import "./styles/details.css";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -59,7 +61,7 @@ export default function Details() {
   return (
     <div className="detailsContainer">
        
-          <Card sx={{ maxWidth: 345 }}  className="cardContainer">
+          <Card sx={{ width: 700, margin: "3rem"  }}  className="cardContainer">
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -142,6 +144,17 @@ export default function Details() {
                 <ExpandMoreIcon />
               </ExpandMore>
             </CardActions>
+
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography
+                  paragraph
+                  
+                >
+                  {data?.content.substring(0, 1000) + " ..."}
+                </Typography>
+              </CardContent>
+            </Collapse>
 
             {currentUser?.email === data?.user ? (
           <div className="buttons">

@@ -19,6 +19,7 @@ const Register = () => {
     const displayName=fullName;
     e.preventDefault();
     createUser(email,password,displayName,navigate);
+    navigate("/");
   }
 
 
