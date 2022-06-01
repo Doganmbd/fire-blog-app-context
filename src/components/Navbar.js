@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
@@ -93,12 +92,12 @@ export default function Navbar() {
                   </RouterLink>
                 </div>
               ) : (
-                <div>
-                  <Link component={RouterLink} to={"/login"}>
+                <div  >
+                  <RouterLink className="newPage"  to={"/login"}>
                     <MenuItem onClick={handleClose}>Login</MenuItem>
-                  </Link>
+                  </RouterLink>
 
-                  <RouterLink to={"/register"}>
+                  <RouterLink className="newPage" to={"/register"}>
                     <MenuItem onClick={handleClose}>Register</MenuItem>
                   </RouterLink>
                 </div>
