@@ -105,14 +105,15 @@
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
+
+
+    
 }
 
 /*----- BLOG CARDS --------- */
 .blogCardForm{
     display: flex;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     
         
@@ -122,24 +123,31 @@
     text-align: center;
     
     
+
 }
 
 .blogCardForm .cardContainer{
     box-shadow: 5px 10px 8px #f6b3a7;
     margin: 2rem 1rem;
-    width: 20rem;
-    height: 55vh;
+    width: 25rem;
+    border: 1px solid #f6eded;
     
 }
-
 .cardContainer .cardImage {
     object-fit: fill;
     object-position: center;
     /* cardlardaki img lere verilen efect :   */
-    filter: drop-shadow(8px 8px 10px gray);
-    filter:hue-rotate(180deg);
+   /* filter: drop-shadow(8px 8px 10px gray);
+   filter:hue-rotate(180deg); */
    
 }
+
+
+@media screen and (max-width: 600px) {}
+@media screen and (min-width:601px) and (max-width:768px) {}
+@media screen and (min-width:769px) and (max-width:992px) {}
+@media screen and (min-width:993px) {}
+
 
 .cardContainer .favBtn{
     color: gray;
@@ -164,3 +172,4 @@
         margin-left: auto;
     }
     
+
