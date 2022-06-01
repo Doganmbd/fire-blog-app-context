@@ -39,6 +39,7 @@ export default function Details() {
     const location = useLocation();
   const navigate = useNavigate();
   const data = location.state.item;
+
   console.log(data);
 
   const { currentUser, handleFavIcon } = useAuthContext();
