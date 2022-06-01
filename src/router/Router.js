@@ -7,6 +7,7 @@ import Login from '../pages/Login'
 import NewBlog from '../pages/NewBlog'
 import Profile from '../pages/Profile'
 import Register from '../pages/Register'
+import Update from '../pages/Update'
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
               <Route path="/profile" element={<Profile/>} />
               <Route path="/newblog" element={<NewBlog />} />
               <Route path="/details/:id" element={<Details />} />
+              <Route path="/update/:id" element={<Update />} />
               
 
 
