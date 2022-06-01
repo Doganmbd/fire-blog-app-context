@@ -8,6 +8,7 @@ import NewBlog from '../pages/NewBlog'
 import Profile from '../pages/Profile'
 import Register from '../pages/Register'
 import Update from '../pages/Update'
+import PrivateRouter from './PrivateRouter'
 
 const Router = () => {
   return (
@@ -18,13 +19,13 @@ const Router = () => {
               <Route path="/" element={<Dashboard/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register/>} />
-              <Route path="/profile" element={<Profile/>} />
-              <Route path="/newblog" element={<NewBlog />} />
-              <Route path="/details/:id" element={<Details />} />
-              <Route path="/update/:id" element={<Update />} />
-              
-
-
+              {/* kullanıcı direk linkten login yapmadan sayfaya erişim yapamasın diye privaterouter kullanıyorum */}
+              <Route element={<PrivateRouter/>}>
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="/newblog" element={<NewBlog />} />
+                <Route path="/details/:id" element={<Details />} />
+                <Route path="/update/:id" element={<Update />} />
+              </Route>
             </Routes>
         </Routers>
     </div>
