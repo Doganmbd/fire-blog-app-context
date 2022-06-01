@@ -8,6 +8,8 @@ import google from "../assests/google.png";
 import nextForgot from "../assests/password.png";
 import blog from "../assests/blog.png";
 
+import { ToastifyInfo } from "../utils/toastify";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,6 +22,7 @@ const Login = () => {
     signIn(email, password, navigate);
     // console.log(email, password);
     navigate("/");
+    ToastifyInfo("login successfully")
   };
 
   const handleProviderLogin = () => {
@@ -41,7 +44,7 @@ const Login = () => {
     <div className="registerMain">
       <div className="registerContainer">
         <img src={blog} alt="blog" className="blogLogo" />
-        <h1>── Login ──</h1>
+        <h1 >── Login ──</h1>
 
         <form action="" onSubmit={handleSubmit}>
           <TextField
