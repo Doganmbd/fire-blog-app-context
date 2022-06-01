@@ -163,7 +163,7 @@ export default function Details() {
             </Button>
             <Button
               className="updateButton"
-              onClick={() => navigate(`/updateBlog/${data.id}`, { state: { data } })}
+              onClick={() => navigate(`/update/${data.id}`, { state: { data } })}
             >
               UPDATE
             </Button>
