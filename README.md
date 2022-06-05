@@ -1,7 +1,7 @@
 ## Open https://blog-app-context.netlify.app/
 
 |
-<p>Owner of the Project : Mustafa Bilal DOĞAN<img align="right"
+## <p>Owner of the Project : Mustafa Bilal DOĞAN<img align="right"
   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNcL132LN4J68C0dCOYLA4YCsmqKXChQYSUw&usqp=CAU"  width="15px"></p>
 
 # Project: FireBlog App 
