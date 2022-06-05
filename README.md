@@ -4,6 +4,10 @@
 
 # Project: FireBlog App 
 
+## Expected Outcome
+
+![Project Fire blog_app Snapshot](Blog-App-.gif)
+
 ## Description
 
 Project aims to create a FireBlog App.
@@ -53,9 +57,6 @@ SOLUTION
 ```
 
 
-## Expected Outcome
-
-![Project Fire blog_app Snapshot](Blog-App-.gif)
 
 ## Objective
 
