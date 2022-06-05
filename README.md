@@ -1,12 +1,14 @@
+## Expected Outcome
+
+![Project Fire blog_app Snapshot](Blog-App-.gif)
+
 ## Open https://blog-app-context.netlify.app/
 
 ## <p>Owner of the Project : Mustafa Bilal DOĞAN <img align="right" src="https://images.squarespace-cdn.com/content/v1/5cac68e451f4d482d45e0c77/e90ade1a-a081-43a6-b387-c4515195118f/MBDlogo2019_black-01.jpg"  width="45px"></p>
 
 # Project: FireBlog App 
 
-## Expected Outcome
 
-![Project Fire blog_app Snapshot](Blog-App-.gif)
 
 ## Description
 
